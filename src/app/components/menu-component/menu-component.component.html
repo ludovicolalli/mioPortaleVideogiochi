@@ -1,0 +1,7 @@
+<h1>BENVENUTI NEL PORTALE DEI VIDEOGIOCHI - MENU</h1>
+
+<ul>
+  <li *ngFor="let item of menuList">
+    <a [routerLink]="[item.endpoint]" routerLinkActive="router-link-active">{{item.descrizione}}</a>
+  </li>
+</ul>
