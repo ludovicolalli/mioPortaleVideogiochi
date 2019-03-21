@@ -7,13 +7,14 @@ import { EditGameComponentComponent } from './components/edit-game-component/edi
 import { MenuComponentComponent } from './components/menu-component/menu-component.component';
 import { RoutingEnum } from './class/Routing-Enum';
 import { LoginComponent } from './components/login/login.component';
+import { RouteGuard } from './class/RouteGuard';
 
 const heroesRoutes: Routes = [
     {path: RoutingEnum.login, component: LoginComponent},
-    {path: RoutingEnum.home, component: HomeComponentComponent},
-    {path: RoutingEnum.lista, component: GameListComponentComponent},
-    {path: RoutingEnum.dettaglio, component: GameDetailComponentComponent},
-    {path: RoutingEnum.modifica, component: EditGameComponentComponent},
+    {path: RoutingEnum.home, component: HomeComponentComponent, canActivate:[RouteGuard]},
+    {path: RoutingEnum.lista, component: GameListComponentComponent, canActivate:[RouteGuard]},
+    {path: RoutingEnum.dettaglio, component: GameDetailComponentComponent, canActivate:[RouteGuard]},
+    {path: RoutingEnum.modifica, component: EditGameComponentComponent, canActivate:[RouteGuard]},
     {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 

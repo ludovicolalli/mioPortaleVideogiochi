@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RoutingEnum } from 'src/app/class/Routing-Enum';
 import { MenuItem } from 'src/app/class/Menu-Item';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -14,13 +15,16 @@ export class MenuComponentComponent implements OnInit {
     {id: 2, descrizione: 'lista', selezionato: false, endpoint: '/'  + RoutingEnum.lista},
     {id: 3, descrizione: 'modifica', selezionato: false, endpoint: '/' + RoutingEnum.modifica},
     {id: 4, descrizione: 'dettaglio', selezionato: false, endpoint: '/' + RoutingEnum.dettaglio},
-    {id: 5, descrizione: 'logout', selezionato: false, endpoint: '/' + RoutingEnum.logout}
   ]
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
-    
+  }
+
+  logout(){
+    sessionStorage.clear();
+    this.router.navigate([RoutingEnum.login]);
   }
 
 }

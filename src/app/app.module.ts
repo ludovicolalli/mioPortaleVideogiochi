@@ -10,7 +10,6 @@ import { EditGameComponentComponent } from './components/edit-game-component/edi
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
-import { LogoutComponent } from './components/logout/logout.component';
 
 
 @NgModule({
@@ -22,7 +21,6 @@ import { LogoutComponent } from './components/logout/logout.component';
     GameDetailComponentComponent,
     EditGameComponentComponent,
     LoginComponent,
-    LogoutComponent
   ],
   imports: [
     BrowserModule,
