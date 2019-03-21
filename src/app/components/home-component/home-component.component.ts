@@ -8,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponentComponent implements OnInit {
   
   constructor() { }
-  nome: string;
-  password: string;
+  
+  nome: string = sessionStorage.getItem('user');
+  password: string = sessionStorage.getItem('pwd');
+  
+  nomeUtente = this.nome;
+  
   ngOnInit() {
-    this.nome = sessionStorage.getItem('user');
-    this.password = sessionStorage.getItem('pwd');
   }
-
 }
