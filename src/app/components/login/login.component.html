@@ -1,0 +1,11 @@
+<div>
+  <h2>Login Form</h2>
+  <form>
+    <label>Username</label> <br>
+    <input type="text" placeholder="Inserisci Username" [(ngModel)] = "user"name="user"> <br> <br>
+    <label>Password</label> <br>
+    <input type="password" placeholder="Inserisci Password"[(ngModel)]="pwd" name="pwd"> <br> <br>
+    <button (click)="login()" type="submit">Login</button>
+    <button (click)="resetInput()" type="reset">Reset</button>
+  </form>
+</div>

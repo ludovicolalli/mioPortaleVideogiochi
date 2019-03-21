@@ -2,11 +2,13 @@
 
 <ul>
     <li *ngFor="let item of gameList">
-        <p>
-            {{item.Nome}}
-        </p>
-        <p>
-            {{item.Descrizione}}
-        </p>
+        <div class="descrGioco">
+            <p>
+                {{item.Nome}}
+            </p>  
+            <p>
+                {{item.Descrizione}}
+            </p>  
+        </div>
     </li>
 </ul>

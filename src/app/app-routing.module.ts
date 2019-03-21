@@ -6,13 +6,15 @@ import { GameDetailComponentComponent } from './components/game-detail-component
 import { EditGameComponentComponent } from './components/edit-game-component/edit-game-component.component';
 import { MenuComponentComponent } from './components/menu-component/menu-component.component';
 import { RoutingEnum } from './class/Routing-Enum';
+import { LoginComponent } from './components/login/login.component';
 
 const heroesRoutes: Routes = [
+    {path: RoutingEnum.login, component: LoginComponent},
     {path: RoutingEnum.home, component: HomeComponentComponent},
     {path: RoutingEnum.lista, component: GameListComponentComponent},
     {path: RoutingEnum.dettaglio, component: GameDetailComponentComponent},
     {path: RoutingEnum.modifica, component: EditGameComponentComponent},
-    {path: '', redirectTo: '/home', pathMatch: 'full'}
+    {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 
 @NgModule({

@@ -9,8 +9,9 @@ import { identifierModuleUrl } from '@angular/compiler';
 export class GameListService {
   
   private gameList: Array<Game> = [
-    new Game(1,"FFX", 'asda'),
-    new Game(2,"Fifa 2019", 'gioco calcio')
+    new Game(1, "FFX", 'asda'),
+    new Game(2, "Fifa 2019", 'gioco calcio'),
+    new Game(3, "League of Legends", 'guerra fantascienza')
   ];
 
   constructor() { }
