@@ -1,14 +1,9 @@
 <h1>LISTA GIOCHI</h1>
-
-<ul>
-    <li *ngFor="let item of gameList">
-        <div class="descrGioco">
-            <p>
-                {{item.Nome}}
-            </p>  
-            <p>
-                {{item.Descrizione}}
-            </p>  
-        </div>
-    </li>
-</ul>
+<div class="lista">
+    <ul class="colEle">
+        <li *ngFor="let item of gameList">
+            <p>{{item.Nome}}</p>  
+            <p>{{item.Descrizione}}</p>  
+        </li>
+    </ul>
+</div>

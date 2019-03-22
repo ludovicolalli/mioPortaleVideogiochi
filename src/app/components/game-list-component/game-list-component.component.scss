@@ -1,7 +1,17 @@
-.descrGioco{
-    background-color: cornflowerblue;
-    width: 50%;
-}
 h1{
     text-align: center;
+}
+ul{
+    list-style-type: none;
+    width: 100%;
+    background-color: lavender;
+}
+.lista{
+    text-align: center;
+}
+.colEle li:nth-child(even) {
+    background-color: cornflowerblue;
+}
+.colEle li:nth-child(odd) {
+    background-color: gold;
 }
